@@ -1,5 +1,5 @@
 [package]
-name = "hello-rust"
+name = "rust-playground"
 version = "0.1.0"
 authors = ["Weidong Lian <weidong.lian@gmail.com>"]
 edition = "2018"
