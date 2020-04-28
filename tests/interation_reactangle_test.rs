@@ -1,5 +1,3 @@
-extern crate rust_playground;
-
 use rust_playground::Reactangle;
 
 #[test]
