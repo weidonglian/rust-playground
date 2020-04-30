@@ -2,7 +2,9 @@ use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 
-fn main() {
+#[test]
+#[should_panic]
+fn basic() {
     // create path
     let path = Path::new("foo.txt");
     let display = path.display();

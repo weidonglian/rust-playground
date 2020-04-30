@@ -23,7 +23,8 @@ fn collection_type_name(collection_type: CollectionType) -> String {
     }
 }
 
-fn main() {
+#[test]
+fn basic() {
     assert_eq!(CollectionType::VARIANT_COUNT, 3);
     println!(
         "My collection type is {}",

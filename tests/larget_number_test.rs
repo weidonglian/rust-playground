@@ -21,7 +21,8 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     return largest_item;
 }
 
-fn main() {
+#[test]
+fn basic() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&number_list);

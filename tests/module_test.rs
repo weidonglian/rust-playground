@@ -1,8 +1,3 @@
-fn main() {
-    use m1::m2::f2 as func2;
-    func2(10);
-}
-
 mod m1 {
     fn f1(name: &str) {
         println!("calling f1 with:{}", name);
@@ -15,4 +10,10 @@ mod m1 {
             f1("lianweidong");
         }
     }
+}
+
+#[test]
+fn basic() {
+    use m1::m2::f2 as func2;
+    func2(10);
 }
