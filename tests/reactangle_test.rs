@@ -1,4 +1,4 @@
-use rust_playground::Reactangle;
+use rust_playground::reactangle::Reactangle;
 
 #[test]
 fn can_hold() {
