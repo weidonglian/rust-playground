@@ -54,3 +54,27 @@ fn basic() {
         print!("ele is {}", i.0); // .0 is access the first element
     }
 }
+
+#[test]
+fn by_value() {
+    let v = vec![10, 20, 50, 45];
+    for i in v {
+        println!("the value i is {}", i);
+    }
+    // println!("the v is {:?}", v); can not use it since the loop above move it.
+}
+
+#[test]
+fn by_ref() {
+    let mut v = vec![10, 20, 50, 45];
+    let o = v.clone();
+    for &i in &v {
+        println!("the value is {}", i)
+    }
+    assert_eq!(v, o);
+
+    for i in &mut v {
+        *i = 30;
+    }
+    assert_ne!(v, o);
+}
