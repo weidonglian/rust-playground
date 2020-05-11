@@ -16,4 +16,4 @@ One of the key things that a lot of people trip over is thinking that lifetime a
 
 When handing an object off to a thread, it must have only 'static references, because the new thread could outlive the original thread.
 
-see more details![static bound lifetime](https://users.rust-lang.org/t/why-does-thread-spawn-need-static-lifetime-for-generic-bounds/4541).
+[see more details](https://users.rust-lang.org/t/why-does-thread-spawn-need-static-lifetime-for-generic-bounds/4541).
