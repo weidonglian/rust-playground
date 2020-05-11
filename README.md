@@ -1,8 +1,8 @@
-# rust-playground![status](https://github.com/weidonglian/rust-playground/workflows/rust-playground/badge.svg)
+## rust-playground![status](https://github.com/weidonglian/rust-playground/workflows/rust-playground/badge.svg)
 
 A collection of keynotes during my way of learning rust.
 
-## Object lifetime
+### Object lifetime
 
 The 'static bound on a type doesn’t control how long that object lives; it controls the allowable lifetime of references that object holds. For example, String is a 'static bound object, since it holds no reference. If an object is bounded with 'static, it should hold no reference or a reference 'static bound.
 
