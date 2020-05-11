@@ -1,4 +1,6 @@
-## rust-playground![status](https://github.com/weidonglian/rust-playground/workflows/rust-playground/badge.svg)
+# rust-playground![status](https://github.com/weidonglian/rust-playground/workflows/rust-playground/badge.svg)
+
+## Learning keynotes
 
 A collection of keynotes during my way of learning rust.
 
