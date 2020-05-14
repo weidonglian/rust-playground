@@ -10,10 +10,7 @@ fn variable_binding_and_expression_demo() {
         x_cube + x_squared + x
     };
 
-    let z = {
-        // The semicolon suppresses this expression and `()` is assigned to `z`
-        2 * x;
-    };
+    let z = { 2 * x };
 
     println!("x is {:?}", x);
     println!("y is {:?}", y);
@@ -23,6 +20,7 @@ fn variable_binding_and_expression_demo() {
 #[test]
 fn let_pre_declare() {
     let x;
+    //println!("{}", x); compiler error
     let y = 10;
     {
         x = y * y;
@@ -34,6 +32,7 @@ fn let_pre_declare() {
 #[test]
 fn let_shadow() {
     let x = 10;
+    println!("{}", x);
     let x = format!("{}", 10);
     println!("{}", x);
 }
@@ -56,4 +55,38 @@ fn let_by_block() {
     let z = if x == 10 { "A" } else { "B" };
 
     println!("[{}, {}, {}]", x, y, z);
+}
+
+#[test]
+fn match_if() {
+    let pair = (2, -2);
+    // TODO ^ Try different values for `pair`
+
+    println!("Tell me about {:?}", pair);
+    match pair {
+        (x, y) if x == y => println!("These are twins"),
+        // The ^ `if condition` part is a guard
+        (x, y) if x + y == 0 => println!("Antimatter, kaboom!"),
+        (x, _) if x % 2 == 1 => println!("The first one is odd"),
+        _ => println!("No correlation..."),
+    }
+}
+
+fn some_number() -> Option<u32> {
+    Some(42)
+}
+
+#[test]
+fn match_binding() {
+    // @ and if are equavalent
+    match some_number() {
+        // Got `Some` variant, match if its value, bound to `n`,
+        // is equal to 42.
+        Some(n @ 42) => println!("The Answer: {}!", n),
+        Some(n) if n == 42 => panic!("should not reach here"),
+        // Match any other number.
+        Some(n) => println!("Not interesting... {}", n),
+        // Match anything else (`None` variant).
+        _ => (),
+    }
 }

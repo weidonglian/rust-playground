@@ -86,3 +86,22 @@ fn iter_mut_demo() {
     assert_eq!(v1_iter.next(), Some(&mut 3));
     assert_eq!(v1_iter.next(), None);
 }
+
+#[test]
+fn for_iter() {
+    let items = vec![10, 20, 30];
+
+    for i in items.iter() {
+        match i {
+            10 => println!("There is a rustacean among us!"),
+            _ => println!("Hello {}", i),
+        }
+    }
+
+    for i in &items {
+        match i {
+            10 => println!("There is a rustacean among us!"),
+            _ => println!("Hello {}", i),
+        }
+    }
+}
