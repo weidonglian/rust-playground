@@ -78,3 +78,20 @@ fn by_ref() {
     }
     assert_ne!(v, o);
 }
+
+#[test]
+fn ref_pattern_match_and_destruction() {
+    let mut t = (34, 58);
+    {
+        let (_, ref mut y) = t;
+        *y = 10;
+    }
+    println!("{:?}", t);
+    assert_eq!((34, 10), t);
+
+    match t {
+        (_, ref y) => assert_eq!(*y, 10),
+    }
+
+    println!("{:?}", t);
+}
