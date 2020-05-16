@@ -9,8 +9,19 @@ fn give_princess(gift: &str) {
 }
 
 #[test]
-//#[should_panic]
+#[should_panic]
 fn basic() {
     give_princess("teddy bear");
     give_princess("snake");
+}
+
+#[test]
+fn iter_over_results() {
+    let strings = vec!["tofu", "93", "18"];
+    let numbers = strings
+        .into_iter()
+        .map(|s| s.parse::<i32>())
+        .filter_map()
+        .collect::<Vec<_>>();
+    println!("Results: {:?}", numbers);
 }
