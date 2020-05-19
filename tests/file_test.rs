@@ -19,3 +19,15 @@ fn basic() {
         .expect("fail to read to string");
     println!("the file:{} content is:\n{}", display, buf);
 }
+
+#[test]
+fn display_path() {
+    let path = Path::new(".");
+    println!("the current path is:{}", path.display());
+
+    let new_path = path.join("a").join("b");
+    println!(
+        "the new path is:{}",
+        new_path.to_str().expect("unknown path")
+    );
+}
