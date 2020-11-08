@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4dfe9167-89fb-4833-a631-7b9046cb86af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reactangle.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/rectangle.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/command_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/command_test.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reactangle_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/reactangle_test.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/string_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/string_test.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/type_conversion_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/type_conversion_test.rs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="awp11xyb" />
+  </component>
+  <component name="ProjectId" id="1k1PeE3YpeTYiSpVNYagj7FKVXp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cargo test" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package rust-playground --test reactangle_test" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.test" />
+        <item itemvalue="Cargo.test" />
+        <item itemvalue="Cargo.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4dfe9167-89fb-4833-a631-7b9046cb86af" name="Default Changelist" comment="" />
+      <created>1604865218958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604865218958</updated>
+      <workItem from="1604865220313" duration="69000" />
+      <workItem from="1604865297421" duration="526000" />
+      <workItem from="1604865833807" duration="208000" />
+      <workItem from="1604866654876" duration="264000" />
+      <workItem from="1604866930596" duration="417000" />
+      <workItem from="1604867363489" duration="578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1036" y="570" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604865825443">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1036" y="570" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1604865825443" />
+    <state x="1061" y="442" key="FileChooserDialogImpl" timestamp="1604866031753">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="442" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604866031753" />
+    <state width="2517" height="408" key="GridCell.Tab.0.bottom" timestamp="1604867663080">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="408" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604867663080" />
+    <state width="2517" height="408" key="GridCell.Tab.0.center" timestamp="1604867663080">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="408" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604867663080" />
+    <state width="2517" height="408" key="GridCell.Tab.0.left" timestamp="1604867663080">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="408" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604867663080" />
+    <state width="2517" height="408" key="GridCell.Tab.0.right" timestamp="1604867663080">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="408" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604867663080" />
+    <state x="420" y="145" width="1667" height="1108" key="SettingsEditor" timestamp="1604867350691">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="420" y="145" width="1667" height="1108" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1604867350691" />
+    <state x="937" y="331" width="672" height="677" key="run.anything.popup" timestamp="1604867079648">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="937" y="331" width="672" height="677" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1604867079648" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1604867072382">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1604867072382" />
+  </component>
+</project>
