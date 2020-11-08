@@ -9,7 +9,7 @@ fn basic() {
         });
     if output.status.success() {
         let s = String::from_utf8_lossy(&output.stdout);
-        println!("sucess with:{}", s);
+        println!("success with:{}", s);
     } else {
         let s = String::from_utf8_lossy(&output.stderr);
         println!("failed with:{}", s)

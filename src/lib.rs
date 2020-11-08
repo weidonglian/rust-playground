@@ -1,2 +1,2 @@
-pub mod reactangle;
+pub mod rectangle;
 pub mod shoe;

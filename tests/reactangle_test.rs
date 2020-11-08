@@ -1,8 +1,8 @@
-use rust_playground::reactangle::Reactangle;
+use rust_playground::rectangle::Rectangle;
 
 #[test]
 fn can_hold() {
-    let a = Reactangle::new(24, 50);
-    let b = Reactangle::new(10, 20);
+    let a = Rectangle::new(24, 50);
+    let b = Rectangle::new(10, 20);
     assert!(a.can_hold(&b));
 }
