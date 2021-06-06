@@ -1,4 +1,4 @@
-use futures::executor::block_on;
+use tokio::runtime::Runtime;
 
 async fn hello(name: &str) {
     println!("hello, {}", name);
@@ -7,7 +7,8 @@ async fn hello(name: &str) {
 #[test]
 fn block_on_demo() {
     let future = hello("Jimmy");
+    let rt = Runtime::new().unwrap();
     println!("before...");
-    block_on(future);
+    rt.block_on(future);
     println!("after...");
 }
