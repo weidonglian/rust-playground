@@ -25,7 +25,7 @@ impl Future for Delay {
 async fn delay_future() {
     let start = Instant::now();
     let when = start + Duration::from_millis(10);
-    Delay { when }.await;
-    println!("Time taken: {:?}", Instant::now() - start);
+    let out = Delay { when }.await;
+    println!("Time taken: {:?} with {}", Instant::now() - start, out);
     assert!(Instant::now() >= when);
 }
