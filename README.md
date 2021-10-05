@@ -15,6 +15,30 @@ to use it afterwards, then you have the option to clone the type if the type imp
 can do anything you want in your implementation. Absolute, you have more advanced options as well, e.g. `Box`, `Rc`, `Arc`.
 - The reference/pointer `T&` semantic is managed by the borrower checker to guarantee the correctness of reference or pointer.
 
+## Pointers
+
+Box, Rc, and Arc are pointers.
+
+Box<T> is for single ownership => `unique_ptr` in C++.
+Rc<T> is for multiple ownership => `shared_ptr` in C++.
+Arc<T> is for multiple ownership, but thread-safe => `atomic_shared_ptr` in C++. 
+
+Not exactly the same thing, but we could assume they try to achieve the same goal. 
+
+## Cells
+
+Cell, RefCell, Mutex, and RwLock are cells.
+
+Cells provide interior mutability. In other words, they contain data which can be manipulated even 
+if the type cannot be obtained in a mutable form (for example, when it is behind an &-ptr or Rc<T>).
+
+Cell<T> is a type that provides zero-cost interior mutability, but only for Copy types.
+RefCell<T> also provides interior mutability, but isn’t restricted to Copy types
+
+## Composition
+
+Pointers and Cells could be composed to be used in difference cases when used between threads.
+
 ## Object lifetime
 
 The `'static` bound on a type doesn’t control how long that object lives; it controls the allowable lifetime of references
