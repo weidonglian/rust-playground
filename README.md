@@ -15,21 +15,52 @@ to use it afterwards, then you have the option to clone the type if the type imp
 can do anything you want in your implementation. Absolute, you have more advanced options as well, e.g. `Box`, `Rc`, `Arc`.
 - The reference/pointer `T&` semantic is managed by the borrower checker to guarantee the correctness of reference or pointer.
 
+## Move, Copy, Clone
+
+To better understand this, we could judge by the operated type, i.e. primitive type or shared resources.
+
+Primitive type is self-contained, e.g. i32, f32, bool such. Those types will manage their own memory resources.
+Types that hold resources, e.g. String, those types hold allocated resources elsewhere inside the `String` object.
+
+For primitive types, they are copyable by default, i.e. they have implemented the `Copy` trait.
+For shared resources types, i.e. String. They are not copyable by default. Thus it will be moved if transfer them during
+assignments or function calls as below:
+
+```rust
+// The assignment behaves like a `Move` sementic, since `s` is not copyable
+let s = String::new("hello");
+let t = s; // assignment will move it and t will own the `String` from now on.
+let r = t.Clone(); // now t is still valid
+println!("t:'{}' is still valid", t); // `t` is still valid, since we clone a new one to assign to r
+fn take_string(t: String) {} // this function will take the ownership of String `s`.
+
+// Assignment behaves like a `Copy` sementic.
+let o: i32 = 10;
+let p = o;
+let q = p;
+println!("o={}, p={}, q={}", o, p, q); // they are all valid, since we copy them by default.
+```
+
+You are allowed to implement your own `Copy` trait's implementation for your own type.
+Then the assignment will behave like a `Copy`.
+
+`Copy` trait is also a `Clone` trait.
+
 ## Pointers
 
 Box, Rc, and Arc are pointers.
 
 Box<T> is for single ownership => `unique_ptr` in C++.
 Rc<T> is for multiple ownership => `shared_ptr` in C++.
-Arc<T> is for multiple ownership, but thread-safe => `atomic_shared_ptr` in C++. 
+Arc<T> is for multiple ownership, but thread-safe => `atomic_shared_ptr` in C++.
 
-Not exactly the same thing, but we could assume they try to achieve the same goal. 
+Not exactly the same thing, but we could assume they try to achieve the same goal.
 
 ## Cells
 
 Cell, RefCell, Mutex, and RwLock are cells.
 
-Cells provide interior mutability. In other words, they contain data which can be manipulated even 
+Cells provide interior mutability. In other words, they contain data which can be manipulated even
 if the type cannot be obtained in a mutable form (for example, when it is behind an &-ptr or Rc<T>).
 
 Cell<T> is a type that provides zero-cost interior mutability, but only for Copy types.
